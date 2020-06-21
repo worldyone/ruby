@@ -8,12 +8,12 @@ class MessagesController < ApplicationController
 
   def show
     @msg = "Indexed data."
-    @data = Message.find(params[:id])
+    @message = Message.find(params[:id])
   end
 
   def add
     @msg = 'Message data.'
-    @data = Message.new
+    @message = Message.new
   end
 
   def create
