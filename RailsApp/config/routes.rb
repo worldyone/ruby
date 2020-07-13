@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :questionary_results
+  resources :questionary_choices
+  resources :questionary_items
+  resources :questionaries
   resources :answers
   resources :questions
   resources :mycontacts
