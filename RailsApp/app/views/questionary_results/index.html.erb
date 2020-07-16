@@ -12,10 +12,10 @@
   </thead>
 
   <tbody>
-    <% @questionary_results.each do |questionary| %>
+    <% @questionaries.each do |questionary| %>
       <tr>
         <td><%= questionary.id %></td>
-        <td><%= qquestionar.title %></td>
+        <td><%= questionary.title %></td>
         <td><a href="/questionary_results/<%=questionary.id %>">Show</a></td>
       </tr>
     <% end %>

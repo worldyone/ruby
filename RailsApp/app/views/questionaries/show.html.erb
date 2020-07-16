@@ -27,8 +27,7 @@
 
     <div class="choice">
       <input type="radio" id="<%= count_items.to_s + '_' + count_choices.to_s %>"
-        name="r<%= count_items.to_s %>"
-        value="<%= choice.value %>">
+        name="r<%= count_items.to_s %>" value="<%= choice.value %>">
       <label for="<%= count_items.to_s + '_' + count_choices.to_s %>">
         <%= choice.content %></label></div>
   <% end %>

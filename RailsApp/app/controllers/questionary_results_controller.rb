@@ -1,10 +1,10 @@
 class QuestionaryResultsController < ApplicationController
-  before_action :set_questionary_result, only: [:show, :edit, :update, :destroy]
+  # before_action :set_questionary_result, only: [:show, :edit, :update, :destroy]
 
   # GET /questionary_results
   # GET /questionary_results.json
   def index
-    @questionary_results = QuestionaryResult.all
+    @questionaries = Questionary.all
   end
 
   # GET /questionary_results/1

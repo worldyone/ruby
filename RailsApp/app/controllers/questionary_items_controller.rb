@@ -16,7 +16,7 @@ class QuestionaryItemsController < ApplicationController
   def new
     @questionary_item = QuestionaryItem.new
     @questionary_item.questionary_id = params[:id]
-    @questionary = QuestionaryItem.find params[:id]
+    @questionary = Questionary.find params[:id]
   end
 
   # GET /questionary_items/1/edit
@@ -30,7 +30,7 @@ class QuestionaryItemsController < ApplicationController
 
     respond_to do |format|
       if @questionary_item.save
-        format.html { redirect_to 'questionary_choices/new/' + @questionary_item.id.to_s }
+        format.html { redirect_to '/questionary_choices/new/' + @questionary_item.id.to_s }
         format.json { render :show, status: :created, location: @questionary_item }
       else
         format.html { render :new }
