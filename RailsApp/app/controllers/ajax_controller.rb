@@ -5,10 +5,10 @@ class AjaxController < ApplicationController
   end
 
   def data
-    @data = Person.where 'name like ?', '%' + params[:name] + '%'
-    @data = @data.to_json.html_safe
-
-    # @ajax_data = Person.find 1
+    url = URI('http://news.yahoo.co.jp/pickup/rss.xml')
+    http = Net::HTTP.new(url.host)
+    response = http.get(url)
+    @data = Hash.from_xml(response.body).to_json.html_safe
   end
 
 end
