@@ -10,4 +10,9 @@ Person.create(name:'Taro', age:38, mail:'taro@yamada')
 Person.create(name:'Hanako', age:34, mail:'hanako@flower')
 Person.create(name:'sachiko', age:56, mail:'sachiko@happy')
 
-Blogconfig.create(id:1, title:'my blog', subtitle:'サンプルで作ったブログです。', stylename:'gray')
+# Blogconfig.create(id:1, title:'my blog', subtitle:'サンプルで作ったブログです。', stylename:'gray')
+
+data = ['one','two','three','four','five','six','seven','eight','nine','ten','zero','white','black','gray','red','blue','green','yellow','cyan','magenda']
+for i in 1..100 do
+    DataPage.create data:data.sample
+end
